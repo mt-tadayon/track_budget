@@ -11,7 +11,34 @@
 </head>
 
 <body>
+    <table style="width:50%">
+        <tr>
+            <th>Date</th>
+            <th>Article</th>
+            <th>Price</th>
+            <th>Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <form action="/action_page.php">
+                    <input type="text" name="articel" required>
+                    <input type="submit">
+                </form>
+            </td>
+            <td>Article</td>
+            <td>Price</td>
+            <td>
+                <select required>
+                    <option value="">None</option>
+                    <option value="">Euro</option>
+                    <option value="">Dirham</option>
+                    <option value="">Dinar</option>
+                    <option value="">Dollar</option>
+                </select>
+            </td>
+        </tr>
 
+    </table>
 </body>
 
 </html>
