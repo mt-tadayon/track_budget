@@ -6,39 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Budget Tracker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
 <body>
-    <table style="width:50%">
-        <tr>
-            <th>Date</th>
-            <th>Article</th>
-            <th>Price</th>
-            <th>Currency</th>
-        </tr>
-        <tr>
-            <td>
-                <form action="/action_page.php">
-                    <input type="text" name="articel" required>
-                    <input type="submit">
-                </form>
-            </td>
-            <td>Article</td>
-            <td>Price</td>
-            <td>
-                <select required>
-                    <option value="">None</option>
-                    <option value="">Euro</option>
-                    <option value="">Dirham</option>
-                    <option value="">Dinar</option>
-                    <option value="">Dollar</option>
-                </select>
-            </td>
-        </tr>
+    <form>
 
-    </table>
+        <h3>Items</h3>
+        <ul></ul>
+        <button type="submit">Submit!</button>
+        <table>
+            <caption>Track your travel budget!</caption>
+            <tr>
+                <th>Date</th>
+                <th>Article</th>
+                <th>Price</th>
+                <th>Currency</th>
+            </tr>
+            <tr>
+
+                <td>
+                    <input id="date" type="date" placeholder="Date" required>
+                </td>
+                <td>
+                    <input id="item" type="text" placeholder="New" required>
+                </td>
+                <td>
+                    <input id="price" type="number" min="0.00" step="0.01" placeholder="Price" required>
+                </td>
+                <td>
+                    <select required>
+                        <option value="0">None</option>
+                        <option value="1">Euro</option>
+                        <option value="2">Dirham</option>
+                        <option value="3">Dinar</option>
+                        <option value="4">Dollar</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <script src="main.js"></script>
+
 </body>
 
 </html>
+
+<!-- 
+    <tr>
+        <td></td>
+    text
+</tr> -->
