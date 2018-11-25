@@ -1,0 +1,31 @@
+{
+  "name": "track_budget",
+  "version": "1.0.0",
+  "description": "Travel Budget Planner ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimifi/track_budget.git"
+  },
+  "keywords": [
+    "Travel",
+    "Budget",
+    "Planner"
+  ],
+  "author": "Mahtab Tadayon & Max Weber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mimifi/track_budget/issues"
+  },
+  "homepage": "https://github.com/mimifi/track_budget#readme",
+  "devDependencies": {
+    "@types/hapi": "^17.6.4",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "hapi": "^17.8.1"
+  }
+}
