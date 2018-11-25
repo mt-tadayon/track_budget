@@ -4,7 +4,9 @@
   "description": "Travel Budget Planner ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "ts-node ./src/server/server.ts",
+    "lint-server": "eslint ./src/server/*"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,15 @@
   "homepage": "https://github.com/mimifi/track_budget#readme",
   "devDependencies": {
     "@types/hapi": "^17.6.4",
-    "typescript": "^3.1.6"
+    "@types/node": "^10.12.10",
+    "eslint": "^5.9.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6",
+    "typescript-eslint-parser": "^21.0.1"
   },
   "dependencies": {
+    "apollo-server-hapi": "^2.2.2",
+    "graphql": "^14.0.2",
     "hapi": "^17.8.1"
   }
 }
