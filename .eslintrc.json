@@ -3,7 +3,8 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jquery": true
     },
     "parser": "typescript-eslint-parser",
     "extends": "eslint:recommended",
@@ -15,10 +16,6 @@
         "indent": [
             "error",
             4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
         ],
         "quotes": [
             "error",
