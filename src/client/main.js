@@ -1,6 +1,5 @@
 document.getElementById("confirm").addEventListener("click", displayData);
 
-
 function listOfData(arrayData) {
     const row = document.createElement("tr");
 
@@ -11,6 +10,14 @@ function listOfData(arrayData) {
         row.appendChild(cell);
     }
     return row;
+}
+
+function clearAddInputFields() {
+    const inputFields = document.getElementsByTagName("input");
+
+    for (let i = 0; i < inputFields.length; i++) {
+        inputFields[i].value = "";
+    }
 }
 
 function displayData() {
@@ -29,4 +36,5 @@ function displayData() {
     let mainTable = document.getElementById("mainTable");
     let data = myData();
     mainTable.appendChild(listOfData(data));
+    clearAddInputFields();
 }
