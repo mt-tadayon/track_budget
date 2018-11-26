@@ -25,8 +25,9 @@
   "homepage": "https://github.com/mimifi/track_budget#readme",
   "devDependencies": {
     "@types/hapi": "^17.6.4",
-    "@types/node": "^10.12.10",
     "@types/inert": "^5.1.2",
+    "@types/mongodb": "^3.1.14",
+    "@types/node": "^10.12.10",
     "@types/swagger-hapi": "^0.7.7",
     "@types/vision": "^5.3.5",
     "eslint": "^5.9.0",
