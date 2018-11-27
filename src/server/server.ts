@@ -1,22 +1,49 @@
-import { resolvers } from './resolver/resolver';
-import { categoryRoute } from './routes/category-route';
+import { categoryTypeDefs, categoryResolvers } from './common/category/category.schema';
 import { ApolloServer } from 'apollo-server-hapi';
-import { typeDefs } from './graphql/book.gql';
+import { makeExecutableSchema } from 'graphql-tools';
 import * as Hapi from 'hapi';
-import { Mongoose } from 'mongoose';
+import * as mongoose from 'mongoose';
+
+mongoose.connect(
+    "mongodb://localhost:27017/budget_tracker",
+    { useNewUrlParser: true }
+).then(
+    () => { console.log(`🚀  Database is now connected`) }
+)
+
+const rootTypeDefs = `
+  type Query
+  type Mutation
+  schema {
+    query: Query
+    mutation: Mutation
+  }
+`;
+
+const schema = makeExecutableSchema({
+    typeDefs: [rootTypeDefs, categoryTypeDefs],
+    resolvers: categoryResolvers
+});
+
 
 async function startServer() {
-
-    connectMongoose();
-
-    const server = new ApolloServer({ typeDefs, resolvers })
+    const server = new ApolloServer({
+        schema,
+        formatError(error: Error) {
+            if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+                // logging the errors can help in development
+                console.log(error);
+            }
+            return error;
+        },
+    })
 
     const app = new Hapi.Server({
         host: 'localhost',
         port: 4000
     })
 
-    app.route(categoryRoute)
+    app.route([]);
 
     await server.applyMiddleware({
         app
@@ -24,19 +51,8 @@ async function startServer() {
 
     await server.installSubscriptionHandlers(app.listener);
 
-    await app.start().then(() => console.log(`Server is started on ${app.info.uri}`));
+    await app.start().then(() => console.log(`🚀  Server is started on ${app.info.uri}`));
 }
 
-function connectMongoose() {
-    const MONGODB_CONNECTION: string = "mongodb://localhost:27017/admin";
-    const mongoose: Mongoose = new Mongoose();
-
-    // Connect to mongoose
-    mongoose.connect(MONGODB_CONNECTION, { useNewUrlParser: true });
-
-    mongoose.connection.once('open', () => {
-        console.log("Connected to Database");
-    })
-}
 
 startServer().catch(error => console.log(error));

@@ -1,6 +1,5 @@
-import { Category } from './../model/category';
+import { ICategory } from './../interfaces/category';
 import * as hapi from 'hapi';
-import { ICategory } from '../interfaces/category';
 
 export const categoryRoute = [{
     method: 'GET',
@@ -14,16 +13,12 @@ export const categoryRoute = [{
     path: '/api/v1/categories',
     handler: () => {
         console.log("Get all categories");
-        return Category.find();
     }
 }, {
     method: 'POST',
     path: '/api/v1/categories',
     handler: (request: hapi.Request) => {
         const { name } = request.payload as ICategory;
-        const category = new Category({
-            name
-        });
-        return category.save();
+        console.log(name);
     }
 }]
