@@ -1,4 +1,24 @@
+checkTheStatusOfButton();
+
 document.getElementById("confirm").addEventListener("click", displayData);
+
+function checkTheStatusOfButton() {
+    let eachField = $(".input-expenses");
+
+    for (let i = 0; i < eachField.length; i++) {
+        eachField[i].addEventListener("keydown", enableTheConfirmButton);
+    }
+}
+
+function enableTheConfirmButton() {
+    const selectTheConfirmButton = $("#confirm");
+
+    if ($("input").val() !== "") {
+        selectTheConfirmButton.prop("disabled", false); // enabled
+    } else {
+        selectTheConfirmButton.prop("disabled", true); // disabled
+    }
+}
 
 function listOfData(arrayData) {
     const row = document.createElement("tr");
@@ -37,4 +57,5 @@ function displayData() {
     let data = myData();
     mainTable.appendChild(listOfData(data));
     clearAddInputFields();
+    enableTheConfirmButton();
 }
