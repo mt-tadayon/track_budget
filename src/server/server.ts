@@ -1,3 +1,5 @@
+import { travelResolvers, travelTypeDefs } from './common/travel/travel.schema';
+import { expenseTypeDefs, expenseResolvers } from './common/expense/expense.schema';
 import { categoryTypeDefs, categoryResolvers } from './common/category/category.schema';
 import { ApolloServer } from 'apollo-server-hapi';
 import { makeExecutableSchema } from 'graphql-tools';
@@ -11,18 +13,30 @@ mongoose.connect(
     () => { console.log(`🚀  Database is now connected`) }
 )
 
+// TODO: Define Date in graphQL
 const rootTypeDefs = `
-  type Query
-  type Mutation
-  schema {
-    query: Query
-    mutation: Mutation
-  }
+    scalar Date
+
+    type Query
+    type Mutation
+    schema {
+        query: Query
+        mutation: Mutation
+    }
 `;
 
 const schema = makeExecutableSchema({
-    typeDefs: [rootTypeDefs, categoryTypeDefs],
-    resolvers: categoryResolvers
+    typeDefs: [
+        rootTypeDefs,
+        categoryTypeDefs,
+        expenseTypeDefs,
+        travelTypeDefs
+    ],
+    resolvers: [
+        categoryResolvers,
+        expenseResolvers,
+        travelResolvers,
+    ]
 });
 
 
