@@ -1,11 +1,11 @@
 {
   "name": "track_budget",
   "version": "1.0.0",
-  "description": "Travel Budget Planner ",
+  "description": "Travel Budget Planner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "nodemon",
+    "test-server": "mocha --require ts-node/register ./test/**/*.ts --watch --recursive",
     "lint-server": "eslint ./src/server/*"
   },
   "repository": {
@@ -24,14 +24,18 @@
   },
   "homepage": "https://github.com/mimifi/track_budget#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/hapi": "^17.6.4",
     "@types/inert": "^5.1.2",
+    "@types/mocha": "^5.2.5",
     "@types/mongodb": "^3.1.14",
+    "@types/mongoose": "^5.3.1",
     "@types/node": "^10.12.10",
     "@types/swagger-hapi": "^0.7.7",
     "@types/vision": "^5.3.5",
-    "@types/mongoose": "^5.3.1",
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.6",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6",

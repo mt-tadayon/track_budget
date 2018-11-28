@@ -2,5 +2,6 @@
     "watch": ["src"],
     "ext": "ts",
     "ignore": ["src/**/*.spec.ts"],
-    "exec": "ts-node ./src/server/server.ts"
+    "exec": "ts-node ./src/server/server.ts",
+    "execTest": "mocha --require ts-node/register test/**/*.ts || true"
 }
