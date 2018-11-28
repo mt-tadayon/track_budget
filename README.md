@@ -12,5 +12,6 @@ Track your budget during your travel
 - The server can be started via short script
 
     ```node
+    npm install
     npm run dev-server
     ```
