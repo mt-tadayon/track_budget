@@ -5,16 +5,17 @@ import Category from './category.model'
  */
 export const categoryTypeDefs = `
   type Category {
-    id: ID!
+    _id: ID!
     name: String!
   }
   input CategoryFilterInput {
     limit: Int
   }
+
   # Extending the root Query type.
   extend type Query {
     categories(filter: CategoryFilterInput): [Category]
-    category(id: String!): Category
+    category(_id: String!): Category
   }
 
   # We do not need to check if any of the input parameters
@@ -28,8 +29,8 @@ export const categoryTypeDefs = `
   # Extending the root Mutation type.
   extend type Mutation {
     addCategory(input: CategoryInput!): Category
-    editCategory(id: String!, input: CategoryInput!): Category
-    deleteCategory(id: String!): Category
+    editCategory(_id: String!, input: CategoryInput!): Category
+    deleteCategory(_id: String!): Category
   }
 `;
 
