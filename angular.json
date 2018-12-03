@@ -5,7 +5,7 @@
   "projects": {
     "client": {
       "root": "",
-      "sourceRoot": "src/client",
+      "sourceRoot": "./src/client",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -14,27 +14,25 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/client",
-            "index": "src/client/index.html",
-            "main": "src/client/main.ts",
-            "polyfills": "src/client/polyfills.ts",
-            "tsConfig": "src/client/tsconfig.app.json",
+            "index": "./src/client/index.html",
+            "main": "./src/client/main.ts",
+            "polyfills": "./src/client/polyfills.ts",
+            "tsConfig": "./src/client/tsconfig.app.json",
             "assets": [
-              "src/client/favicon.ico",
-              "src/client/assets"
+              "./src/client/favicon.ico",
+              "./src/client/assets"
             ],
             "styles": [
-              "src/client/styles.css"
+              "./src/client/styles.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/client/environments/environment.ts",
-                  "with": "src/client/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "./src/client/environments/environment.ts",
+                "with": "./src/client/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -44,13 +42,11 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }]
             }
           }
         },
@@ -96,7 +92,7 @@
               "src/client/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "./node_modules/**"
             ]
           }
         }
@@ -124,7 +120,7 @@
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
             "exclude": [
-              "**/node_modules/**"
+              "./node_modules/**"
             ]
           }
         }
