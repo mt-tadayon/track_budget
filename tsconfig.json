@@ -4,7 +4,7 @@
         "moduleResolution": "node",
         "newLine": "LF",
         "outDir": "./dist/",
-        "target": "es5",
+        "target": "es2017",
         "sourceMap": true,
         "declaration": true,
         "jsx": "preserve",
@@ -17,10 +17,11 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true
     },
     "include": [
-        "src/server/*"
+        "src/client/*"
     ],
     "exclude": [
         ".git",
