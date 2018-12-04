@@ -47,4 +47,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-./src/server/config
+/src/server/config
