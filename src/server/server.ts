@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { travelResolvers, travelTypeDefs } from './common/travel/travel.schema';
 import { expenseTypeDefs, expenseResolvers } from './common/expense/expense.schema';
 import { categoryTypeDefs, categoryResolvers } from './common/category/category.schema';
