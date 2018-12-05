@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'app-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingComponent implements OnInit {
 
   public title = 'Track Budget';
   public model = 1; // let model = 1

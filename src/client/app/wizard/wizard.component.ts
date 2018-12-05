@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-wizard-page',
-  templateUrl: './wizard-page.component.html',
-  styleUrls: ['./wizard-page.component.css']
+  selector: 'app-wizard',
+  templateUrl: './wizard.component.html',
+  styleUrls: ['./wizard.component.css']
 })
-export class WizardPageComponent implements OnInit {
+export class WizardComponent implements OnInit {
 
   constructor() { }
 

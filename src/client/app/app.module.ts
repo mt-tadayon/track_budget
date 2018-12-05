@@ -3,23 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LandingComponent } from './landing/landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
-import { WizardPageComponent } from './wizard-page/wizard-page.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { WizardComponent } from './wizard/wizard.component';
 import { FormsModule } from '@angular/forms';
-import { MainviewPageComponent } from './mainview-page/mainview-page.component';
+import { MainviewComponent } from './mainview/mainview.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
-    LoginPageComponent,
-    RegisterPageComponent,
-    WizardPageComponent,
-    MainviewPageComponent
+    LandingComponent,
+    LoginComponent,
+    RegisterComponent,
+    WizardComponent,
+    MainviewComponent
   ],
   imports: [
     BrowserModule,
