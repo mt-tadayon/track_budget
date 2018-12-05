@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainviewPageComponent } from './mainview-page.component';
+import { WizardPageComponent } from './wizard.component';
 
-describe('MainviewPageComponent', () => {
-  let component: MainviewPageComponent;
-  let fixture: ComponentFixture<MainviewPageComponent>;
+describe('WizardPageComponent', () => {
+  let component: WizardPageComponent;
+  let fixture: ComponentFixture<WizardPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainviewPageComponent ]
+      declarations: [ WizardPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainviewPageComponent);
+    fixture = TestBed.createComponent(WizardPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

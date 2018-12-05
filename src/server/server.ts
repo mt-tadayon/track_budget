@@ -6,6 +6,9 @@ import { ApolloServer } from 'apollo-server-hapi';
 import { makeExecutableSchema } from 'graphql-tools';
 import * as Hapi from 'hapi';
 import * as mongoose from 'mongoose';
+import { initFirebaseForApp } from "./config/firebase";
+
+initFirebaseForApp();
 
 mongoose.connect(
     "mongodb://localhost:27017/budget_tracker",
