@@ -9,6 +9,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { WizardPageComponent } from './wizard-page/wizard-page.component';
 import { FormsModule } from '@angular/forms';
+import { MainviewPageComponent } from './mainview-page/mainview-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     LandingPageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    WizardPageComponent
+    WizardPageComponent,
+    MainviewPageComponent
   ],
   imports: [
     BrowserModule,
