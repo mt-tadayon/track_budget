@@ -74,6 +74,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "apollo-server-hapi": "^2.2.2",
     "core-js": "^2.5.4",
     "firebase-admin": "^6.3.0",
